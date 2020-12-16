@@ -86,15 +86,8 @@ var (
 		},
 		OutputPrometheusMetrics{
 			Name:           "dtap_query_tld_total",
-			Help:           "Total number of queries with a given query tld.",
-			Labels:         []string{"TopLevelDomainName"},
-			ExpireInterval: 5,
-			ExpireSec:      60,
-		},
-		OutputPrometheusMetrics{
-			Name:           "dtap_query_sld_total",
-			Help:           "Total number of queries with a given query tld.",
-			Labels:         []string{"TopLevelDomainName"},
+			Help:           "Total number of queries with a given query domain name and by return code. Forth Level is used because it includes a.b.c.d and everything lower.",
+			Labels:         []string{"FourthLevelDomainName", "Rcode"},
 			ExpireInterval: 5,
 			ExpireSec:      60,
 		},
