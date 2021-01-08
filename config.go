@@ -86,8 +86,8 @@ var (
 		},
 		OutputPrometheusMetrics{
 			Name:           "dtap_query_tld_total",
-			Help:           "Total number of queries with a given query domain name and by return code. Forth Level is used because it includes a.b.c.d and everything lower.",
-			Labels:         []string{"FourthLevelDomainName", "Rcode"},
+			Help:           "Total number of queries with a given query domain name and by return code and query type. Forth Level is used because it includes a.b.c.d and everything lower.",
+			Labels:         []string{"FourthLevelDomainName", "Rcode", "Qtype"},
 			ExpireInterval: 5,
 			ExpireSec:      60,
 		},
